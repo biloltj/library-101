@@ -1,0 +1,93 @@
+{
+    "1984": {
+        "author": "George Orwell",
+        "available": true,
+        "borrower": null,
+        "due_date": null,
+        "history": [
+            [
+                "You",
+                "2025-05-02",
+                "2025-05-02"
+            ],
+            [
+                "You",
+                "2025-05-02",
+                "2025-05-02"
+            ],
+            [
+                "Bilol",
+                "2025-05-02",
+                "2025-05-02"
+            ]
+        ]
+    },
+    "To Kill a Mockingbird": {
+        "author": "Harper Lee",
+        "available": true,
+        "borrower": null,
+        "due_date": null,
+        "history": []
+    },
+    "Atomic habits": {
+        "author": "James Clear",
+        "available": true,
+        "borrower": "Bilol",
+        "due_date": "2025-05-01",
+        "history": [
+            [
+                "Ibrohim",
+                "2025-03-15",
+                "2025-05-01"
+            ]
+        ]
+    },
+    "Deep Work": {
+        "author": "Call Newport",
+        "available": true,
+        "borrower": null,
+        "due_date": null,
+        "history": [
+            [
+                "Bilol",
+                "2025-05-02",
+                "2025-05-02"
+            ],
+            [
+                "You",
+                "2025-05-02",
+                "2025-05-02"
+            ],
+            [
+                "You",
+                "2025-05-02",
+                "2025-05-02"
+            ],
+            [
+                "You",
+                "2025-05-02",
+                "2025-05-02"
+            ]
+        ]
+    },
+    "The Kite Runner": {
+        "author": "Khaled Hosseini",
+        "available": true,
+        "borrower": null,
+        "due_date": null,
+        "history": []
+    },
+    "The Alchemist": {
+        "author": "Paulo Coelho",
+        "available": false,
+        "borrower": "Ibrohim",
+        "due_date": "2025-04-20",
+        "history": [
+            [
+                "Ibrohim",
+                "2025-03-15",
+                "2025-04-01"
+            ]
+        ]
+    }
+}

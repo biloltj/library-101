@@ -1,4 +1,4 @@
-from library import library
+from library import load_library, save_library
 from datetime import datetime, timedelta
 def welcome():
     print("📚✨ Welcome to Library 101 ✨📚")
@@ -17,6 +17,9 @@ def main_menu():
     return choice
 def main():
     welcome()
+    global library
+    library = load_library()
+
     
     while True:
         choice = main_menu()
@@ -73,7 +76,8 @@ def borrow_book():
     book["borrower"] = borrower
     book["due_date"] = due_date
     book["history"].append((borrower, datetime.now().strftime("%Y-%m-%d"), None))
-
+    
+    save_library(library)
     print(f"✅ Success! '{title}' has been borrowed by {borrower}. Due back on {due_date}.")
 def return_book():
     title = input("📤 Enter the title of the book you want to return: ").strip()
@@ -99,6 +103,7 @@ def return_book():
         last_entry = book["history"][-1]
         if last_entry[2] is None:
             book["history"][-1] = (last_entry[0], last_entry[1], return_date)
+    save_library(library)
 
     print(f"✅ '{title}' has been successfully returned by {borrower}. Thank you!")
 
