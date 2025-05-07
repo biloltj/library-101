@@ -1,8 +1,8 @@
 import sys
 from PySide6.QtWidgets import QInputDialog
 from PySide6.QtWidgets import QApplication, QMainWindow
-from library_ui import Ui_MainWindow
-from library import load_library, save_library
+from app.library_ui import Ui_MainWindow
+from app.library import load_library, save_library
 from datetime import datetime, timedelta
 
 class LibraryApp(QMainWindow):
@@ -56,7 +56,9 @@ class LibraryApp(QMainWindow):
             "borrower": borrower,
             "due_date": due_date
         })
-        book["history"].append((borrower, datetime.now().strftime("%Y-%m-%d"), None))
+        last = book["history"][-1]
+        book["history"][-1] = [last[0], last[1], return_date]
+
         save_library(self.library)
 
         self.ui.textOutput.append(f"✅ '{title}' borrowed by {borrower} until {due_date}.")
